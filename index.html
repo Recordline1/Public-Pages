@@ -30,13 +30,13 @@
           <nav class="kids-header__menu menu" id="menuNav">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="" class="kids-header__link">Про захід</a>
+                <a  href="#" data-goto=".about__title" class="kids-header__link">Про захід</a>
               </li>
               <li class="menu__item">
-                <a href="" class="kids-header__link">Спікери</a>
+                <a href="#" data-goto=".speakers__title" class="kids-header__link">Спікери</a>
               </li>
               <li class="menu__item">
-                <a href="" class="kids-header__link">Партнери</a>
+                <a href="#" data-goto=".partners__title" class="kids-header__link">Партнери</a>
               </li>
               <li class="menu__item">
                 <a href="" class="kids-header__link kids-header__link_prog">Програма</a>
@@ -281,23 +281,26 @@
 
       <section class="kids__speakers speakers ">
         <div class="speakers__conteiner">
-          <div class="speakers__body">
-            <div class="speakers__row">
-              <div class="speakers__column column-speakers">
+          <h2 class="speakers__title">
+            Спікери
+          </h2>
+          <div class="speakers__body swiper">
+            <div class="speakers__row swiper-wrapper">
+              <div class="speakers__column column-speakers swiper-slide ">
                 <div class="column-speakers__image"><img src="IMG/speakers/Dr_Bruce_Rubin.jpg" alt="Dr_Bruce_Rubin"></div>
                 <p class="column-speakers__name">Bruce Rubin </p>
                 <p class="column-speakers__text">MEngr, MD, MBA, FRCPC Professor and Chair Emeritus of Pediatrics
                   Virginia Commonwealth University School of Medicine
                 </p>
               </div>
-              <div class="speakers__column column-speakers">
+              <div class="speakers__column column-speakers swiper-slide ">
                 <div class=" column-speakers__image"><img src="IMG/speakers/Valiulis_Arunas_2017_02_4.jpg" alt="Арунас Валіуліс "></div>
                 <p class="column-speakers__name">Арунас Валіуліс</p>
                 <p class="column-speakers__text">професор, член виконавчого комітету Європейської Академії педіатрії,
                   голова респіраторної спілки Литви (точно будемо міняти)
                 </p>
               </div>
-              <div class="speakers__column column-speakers">
+              <div class="speakers__column column-speakers swiper-slide ">
                 <div class="column-speakers__image"><img src="IMG/speakers/doan_svitlana.jpg" alt="Dr_Bruce_Rubin"></div>
                 <p class="column-speakers__name">Доан Світлана Іванівна</p>
                 <p class="column-speakers__text">доктор медичних наук, професор, проректор з післядипломної освіти та
@@ -305,7 +308,7 @@
                   університету
                 </p>
               </div>
-              <div class="speakers__column column-speakers">
+              <div class="speakers__column column-speakers swiper-slide">
                 <div class="column-speakers__image"><img src="IMG/speakers/Макух-Галина-Василівна-1024x976.png" alt="Макух Галина Василівна "></div>
                 <p class="column-speakers__name">Макух Галина Василівна</p>
                 <p class="column-speakers__text">генетик, доктор біологічних наук, завідувачка регіонального центру
@@ -314,7 +317,7 @@
 
                 </p>
               </div>
-              <div class="speakers__column column-speakers">
+              <div class="speakers__column column-speakers swiper-slide ">
                 <div class="column-speakers__image"><img src="IMG/speakers/Kiselova_Mariya_Mikolajivna_-_2_350.jpg" alt="Кісельова Марія Миколаївна "></div>
                 <p class="column-speakers__name">Кісельова Марія Миколаївна </p>
                 <p class="column-speakers__text">доктор медичних наук, професор, завідувач кафедри педіатрії і
@@ -323,7 +326,7 @@
                   e
                 </p>
               </div>
-              <div class="speakers__column column-speakers">
+              <div class="speakers__column column-speakers swiper-slide ">
                 <div class="column-speakers__image"><img src="IMG/speakers/n_v_kamut.webp" alt="Камуть Наталія Василівна "></div>
                 <p class="column-speakers__name">Камуть Наталія Василівна </p>
                 <p class="column-speakers__text">- кандидат медичних наук, доцент кафедри педіатрії і неонатології
@@ -331,7 +334,7 @@
                   Галицького; лікар-педіатр, дитячий алерголог, дитячий та дорослий дерматовенеролог
                 </p>
               </div>
-              <div class="speakers__column column-speakers">
+              <div class="speakers__column column-speakers swiper-slide ">
                 <div class="column-speakers__image"><img src="IMG/speakers/lyga_olga_vladimirovna.jpg" alt="Лига Ольга Володимирівна "></div>
                 <p class="column-speakers__name">Лига Ольга Володимирівна </p>
                 <p class="column-speakers__text">головний дитячий пульмонолог Департаменту охорони здоров`я Львівської
@@ -340,11 +343,18 @@
                 </p>
               </div>
             </div>
+            
+            <div class="swiper2-pagination"></div>
+
+            <div class="swiper2-button-prev swiper-button-disabled"></div>
+            <div class="swiper2-button-next swiper-button-disabled"></div>
           </div>
         </div>
       </section>
+
       <section class="kids__partners partners">
         <div class="partners__conteiner">
+          <h2 class="partners__title">Партнери</h2>          
           <div class="partners__row">
             <div class="partners__column">
               <div class="partners__item-column">
@@ -355,6 +365,7 @@
           </div>
         </div>
       </section>
+
       <section class="kids__organizer organizer">
         <div class="organizer__conteiner">
           <div class="organizer__row">

@@ -204,7 +204,7 @@ body {
 }
 
 .kibs__banner {
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 20px 25px 50px 20px;
 }
 
@@ -227,7 +227,7 @@ body {
   padding-top: 27px;
   float: left;
   display: inline-block;
-  max-width: 40%;
+  max-width: 30%;
 }
 .left-side__sub-title {
   font-size: 2.8125rem;
@@ -239,7 +239,7 @@ body {
 }
 .left-side__title {
   font-weight: bold;
-  font-size: 4.5rem;
+  font-size: 3.125rem;
   line-height: 100px;
   margin: 50px 0px;
   color: #2f3e27;
@@ -416,6 +416,9 @@ body {
   background-image: linear-gradient(to left, #fff 50%, #c6b7f1);
   z-index: 1;
 }
+.about__content-bottom {
+  padding: 20px;
+}
 .about__text {
   position: relative;
   z-index: 3;
@@ -436,6 +439,8 @@ ul .about__item {
 }
 ul .about__item::first-letter {
   text-transform: capitalize;
+  color: #6fb353;
+  letter-spacing: 2px;
 }
 ul .about__item::before {
   content: "☤";
@@ -535,28 +540,20 @@ ul .about__item:nth-child(11).active {
 }
 
 .about__swiper {
-  margin-bottom: 50px;
-}
-
-div.swiper {
-  padding: 50px 0;
-}
-
-div.swiper-slide {
-  width: 290px;
-  overflow: hidden;
-  padding: 35px 0;
+  margin-bottom: 30px;
 }
 
 .slide__item {
-  min-height: 350px;
+  text-align: center;
+  min-height: 330px;
+  margin-bottom: 50px;
   padding: 20px;
   border-radius: 25px;
   background-color: #fff;
   border: 1px solid #000;
 }
 .slide__titel {
-  font-size: 1.875rem;
+  font-size: 1.0625rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -564,26 +561,25 @@ div.swiper-slide {
   margin-bottom: 20px;
 }
 .slide__image img {
-  width: 100%;
+  width: 70%;
   border-radius: 10px;
 }
 .slide__text {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
 }
 
 span.swiper-pagination-bullet {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
 }
 
 .kids__test {
   margin: 50px 0;
-  font-family: Comfortaa;
 }
 
 .test__title {
   font-size: 2.5rem;
-  color: #3874bd;
+  color: #6fb353;
   line-height: 70px;
 }
 .test__body {
@@ -603,10 +599,10 @@ span.swiper-pagination-bullet {
   font-size: 1.5625rem;
   line-height: 37px;
   text-align: justify;
+  color: rgb(255, 255, 255);
 }
-.test__text span {
-  font-weight: bold;
-  color: white;
+.test__text span:first-child {
+  color: #6fb353;
   font-size: 1.6875rem;
 }
 
@@ -614,7 +610,7 @@ span.swiper-pagination-bullet {
   padding-top: 20px;
   text-align: center;
   font-size: 2.5rem;
-  color: #3874bd;
+  color: #6fb353;
 }
 
 .kids__forms {
@@ -631,7 +627,7 @@ span.swiper-pagination-bullet {
 }
 
 .form {
-  padding: 10px;
+  padding: 20px;
   flex: 1 1 33.3333%;
   background: white;
   border: 1px solid #000;
@@ -642,55 +638,73 @@ span.swiper-pagination-bullet {
   margin-bottom: 10px;
   font-weight: bold;
   text-align: center;
-  color: #75287d;
+  color: #6fb353;
   padding: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 .form label {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   display: inline-block;
   font-weight: bold;
 }
 .form input {
   width: 100%;
   padding: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #62a049;
 }
 .form input:focus {
   background-color: rgba(116, 40, 125, 0.062745098);
 }
 .form__btn[type=submit] {
-  background: green;
+  background: url("/IMG/bg.jpg");
   font-size: 1.5625rem;
+  text-transform: uppercase;
+  color: white;
   border-radius: 10px;
-  border-bottom: 2px solid #75287d;
+  padding: 15px 0;
+  border-bottom: 2px solid #62a049;
 }
 
 .kids__speakers {
   margin-bottom: 50px;
 }
 
-.speakers__row {
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+.speakers__title {
+  font-size: 2.5rem;
+  color: #6fb353;
+  padding: 20px;
 }
-.speakers__column {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #000;
+.speakers__body {
+  position: relative;
+}
+.speakers__row {
+  padding: 50px 0;
+}
+.speakers__column:nth-child(5) img {
+  -o-object-position: 0px 10px;
+     object-position: 0px 10px;
+}
+.speakers__column:nth-child(7) img {
+  -o-object-position: top;
+     object-position: top;
 }
 
 .column-speakers {
+  text-align: center;
   background-color: white;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px 15px greenyellow;
 }
 .column-speakers__image {
   position: relative;
-  padding-bottom: 60%;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 370px;
+  height: 370px;
 }
 .column-speakers__image img {
   position: absolute;
@@ -698,8 +712,8 @@ span.swiper-pagination-bullet {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .column-speakers__name {
   font-size: 1.5625rem;
@@ -713,6 +727,45 @@ span.swiper-pagination-bullet {
   font-size: 1.25rem;
 }
 
+div.swiper-slide {
+  height: auto;
+}
+
+.swiper2-pagination {
+  position: absolute;
+  z-index: 2;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.swiper2-button-prev,
+.swiper2-button-next {
+  background: url("/IMG/icons/next.png") 0 0/50px no-repeat;
+  width: 50px;
+  height: 50px;
+  color: blue;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  z-index: 2;
+}
+
+.swiper2-button-prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.swiper2-button-next {
+  right: 0;
+}
+
+.partners__title {
+  font-size: 2.5rem;
+  color: #6fb353;
+  padding: 20px;
+}
 .partners__row {
   display: flex;
   flex-wrap: wrap;
@@ -805,6 +858,21 @@ span.swiper-pagination-bullet {
   .left-side__image {
     max-width: 40%;
   }
+  .left-side__sub-title {
+    font-size: 1.6875rem;
+    line-height: 50px;
+  }
+  .left-side__sub-title span {
+    font-size: 2.5rem;
+  }
+  .left-side__sub-title .left-side__title {
+    font-size: 2.5rem;
+    line-height: 40px;
+    margin: 30px 0px;
+  }
+  .banner__right-side {
+    flex: 1 1 40%;
+  }
 }
 @media (max-width: 1190px) {
   .left-side__image {
@@ -843,7 +911,7 @@ span.swiper-pagination-bullet {
     flex-direction: column;
   }
   .right-side {
-    padding: 0;
+    padding: 50px;
   }
 }
 @media (max-width: 767.97px) {
@@ -1002,7 +1070,8 @@ span.swiper-pagination-bullet {
   .test__text {
     font-size: 1.25rem;
   }
-  .footer__bottom, .footer__top {
+  .footer__bottom,
+  .footer__top {
     display: block;
   }
 }

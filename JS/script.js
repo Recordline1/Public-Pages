@@ -77,7 +77,7 @@ let speakers = new Swiper('#swiper2', {
       320: {
          slidesPerView: 1
       },
-      425: {
+      550: {
          slidesPerView: 2
       },
       768: {

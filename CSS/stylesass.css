@@ -539,38 +539,90 @@ ul .about__item:nth-child(11).active {
   left: 0%;
 }
 
-.about__swiper {
-  margin-bottom: 30px;
+.swiper-wrapper {
+  padding: 0 0 35px 0;
 }
 
 .slide__item {
-  text-align: center;
-  min-height: 330px;
-  margin-bottom: 50px;
-  padding: 20px;
-  border-radius: 25px;
-  background-color: #fff;
-  border: 1px solid #000;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
 }
 .slide__titel {
-  font-size: 1.0625rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.slide__image {
-  margin-bottom: 20px;
+  font-size: 1.5625rem;
+  padding-bottom: 10px;
 }
 .slide__image img {
-  width: 70%;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 25px;
+  display: block;
 }
 .slide__text {
+  padding-top: 10px;
   font-size: 1.25rem;
+  font-style: italic;
+}
+.slide__text::first-letter {
+  font-size: 1.875rem;
+  color: #62a049;
 }
 
-span.swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+.speakers__title {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #6fb353;
+}
+
+.slider-slide {
+  background: white;
+  text-align: center;
+  padding: 10px;
+  height: 100%;
+}
+.slider-slide__image {
+  max-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+.slider-slide__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider-slide__name {
+  font-size: 1.25rem;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.slider-slide__text {
+  line-height: 25px;
+  font-style: italic;
+}
+
+#swiper2 .swiper-slide:nth-child(7) img,
+.swiper-slide:nth-child(5) img {
+  -o-object-position: top;
+     object-position: top;
+}
+
+#slider-slide {
+  height: auto;
+  border: 1px solid #000;
+}
+
+#swiper2 .swiper-button-prev {
+  left: 0;
+}
+
+#swiper2 .swiper-button-next {
+  right: 0;
 }
 
 .kids__test {
@@ -665,100 +717,6 @@ span.swiper-pagination-bullet {
   border-radius: 10px;
   padding: 15px 0;
   border-bottom: 2px solid #62a049;
-}
-
-.kids__speakers {
-  margin-bottom: 50px;
-}
-
-.speakers__title {
-  font-size: 2.5rem;
-  color: #6fb353;
-  padding: 20px;
-}
-.speakers__body {
-  position: relative;
-}
-.speakers__row {
-  padding: 50px 0;
-}
-.speakers__column:nth-child(5) img {
-  -o-object-position: 0px 10px;
-     object-position: 0px 10px;
-}
-.speakers__column:nth-child(7) img {
-  -o-object-position: top;
-     object-position: top;
-}
-
-.column-speakers {
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 3px 3px 15px greenyellow;
-}
-.column-speakers__image {
-  position: relative;
-  margin: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 370px;
-  height: 370px;
-}
-.column-speakers__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.column-speakers__name {
-  font-size: 1.5625rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-}
-.column-speakers__text {
-  flex: 1 1 auto;
-  font-style: italic;
-  font-size: 1.25rem;
-}
-
-div.swiper-slide {
-  height: auto;
-}
-
-.swiper2-pagination {
-  position: absolute;
-  z-index: 2;
-}
-
-.swiper-button-disabled {
-  opacity: 0.5;
-}
-
-.swiper2-button-prev,
-.swiper2-button-next {
-  background: url("/IMG/icons/next.png") 0 0/50px no-repeat;
-  width: 50px;
-  height: 50px;
-  color: blue;
-  position: absolute;
-  top: 50%;
-  margin-top: -50px;
-  z-index: 2;
-}
-
-.swiper2-button-prev {
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.swiper2-button-next {
-  right: 0;
 }
 
 .partners__title {
@@ -937,16 +895,6 @@ div.swiper-slide {
   ul .about__item {
     font-size: 1rem;
   }
-  div.swiper {
-    padding: 0;
-  }
-  .about__swiper {
-    margin: 10px;
-  }
-  span.swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-  }
   .kids-header {
     box-shadow: 2px 4px 10px #75287d;
   }
@@ -1015,6 +963,9 @@ div.swiper-slide {
   .right-side {
     padding: 0;
   }
+  #swiper2 .swiper-button-prev::after, #swiper2 .swiper-button-next::after {
+    font-size: 30px;
+  }
 }
 @media (max-width: 425px) {
   .kids-header {
@@ -1073,5 +1024,14 @@ div.swiper-slide {
   .footer__bottom,
   .footer__top {
     display: block;
+  }
+  #swiper1 .swiper-pagination span {
+    width: 10px;
+    height: 10px;
+  }
+  #swiper1 .swiper-button-prev::after,
+  #swiper1 .swiper-button-next::after {
+    font-size: 22px;
+    transform: translate(0, -50%);
   }
 }

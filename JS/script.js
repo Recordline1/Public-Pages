@@ -10,7 +10,7 @@ burger.onclick = function () {
 
 // ========================Swiper==============================
 
-const swiper = new Swiper('.swiper', {
+let swiper = new Swiper('#swiper1', {
    // Optional parameters
    direction: 'horizontal',
    loop: false,
@@ -18,71 +18,81 @@ const swiper = new Swiper('.swiper', {
    // effect: "coverflow",
    grabCursor: true,
    // centeredSlides: true,
-   slidesPerView: "5",
+   slidesPerView: "4",
    spaceBetween: 20,
-   // coverflowEffect: {
-   //   rotate: 50,
-   //   stretch: 0,
-   //   depth: 100,
-   //   modifier: 1,
-   //   slideShadows: true,
-   // },
-   // initialSlide:3,
-   // If we need pagination
+
    pagination: {
       // dynamicBullets:true,
-      enabled:false,
-      clickable:true,
+      // enabled:false,
+      clickable: true,
       el: '.swiper-pagination',
    },
 
    // Navigation arrows
    navigation: {
-      enabled: true,
+      enabled:false,
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
    },
 
-   // And if we need scrollbar
-   // scrollbar: {
-   //    el: '.swiper-scrollbar',
-   //    clickable: true,
-   // },
+   breakpoints: {
+      320: {
+         slidesPerView: 1
+      },
+      425: {
+         slidesPerView: 2
+      },
+      768: {
+         slidesPerView: 3
+      },
+      992: {
+         slidesPerView: 4
+      },
+   }
 });
 
-const speakers = new Swiper(".speakers__body",{
+let speakers = new Swiper('#swiper2', {
    // Переназначение свих классов
-   // wrapperClass:"speakers__row",
-   // slideClass:"speakers__column",
+   // wrapperClass: "speakers-wrapper",
+   // slideClass: "speakers-slide",
 
    direction: 'horizontal',
    loop: false,
    grabCursor: true,
-   slidesPerView: "2",
+   slidesPerView: "3",
    spaceBetween: 20,
-
-//   observer:true,
-//   observerParents:true,
-//   observeSlideChildren:true,
-
+  
    pagination: {
-      
-      dynamicBullets:true,
-      clickable:true,
-      el: '.swiper2-pagination',
+      // dynamicBullets:true,
+      clickable: true,
+      el: '#swiper2 .swiper-pagination',
    },
 
    navigation: {
-      
-      nextEl: '.swiper2-button-next',
-      prevEl: '.swiper2-button-prev',
+
+      nextEl: '#swiper2 .swiper-button-next',
+      prevEl: '#swiper2 .swiper-button-prev',
    },
+   breakpoints: {
+      320: {
+         slidesPerView: 1
+      },
+      425: {
+         slidesPerView: 2
+      },
+      768: {
+         slidesPerView: 3
+      },
+      992: {
+         slidesPerView: 4
+      },
+   }
 });
 // ================================Animation==============================
 
 const animItems = document.querySelectorAll('.anim-items');
 
-if(animItems.length > 0){
+if (animItems.length > 0) {
    window.addEventListener('scroll', animOnScroll);
    function animOnScroll() {
       for (let index = 0; index < animItems.length; index++) {
@@ -92,24 +102,24 @@ if(animItems.length > 0){
          const animStart = 4;
 
          let animItemPoint = window.innerHeight - animItemHeight / animStart;
-         if (animItemHeight > window.innerHeight){
+         if (animItemHeight > window.innerHeight) {
             animItemPoint = window.innerHeight - window.innerHeight / animStart;
          }
-         if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
-            animItem.classList.add('active');            
-         } else{
-            if(!animItem.classList.contains('no-anim')){
+         if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+            animItem.classList.add('active');
+         } else {
+            if (!animItem.classList.contains('no-anim')) {
 
-               animItem.classList.remove('active');           
+               animItem.classList.remove('active');
             }
          }
       }
    }
-   function offset(el){
+   function offset(el) {
       const rect = el.getBoundingClientRect(),
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,      
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      return {top: rect.top + scrollTop, left: rect.left + scrollLeft}      
+         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
    }
    setTimeout(() => {
       animOnScroll();

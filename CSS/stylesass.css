@@ -615,6 +615,9 @@ ul .about__item:nth-child(11).active {
 #slider-slide {
   height: auto;
   border: 1px solid #000;
+  box-shadow: 3px 3px 15px greenyellow;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 #swiper2 .swiper-button-prev {
